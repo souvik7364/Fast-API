@@ -3,7 +3,7 @@ from models import Product
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-db_url = "mysql+pymysql://root:Souvik.2006@localhost:3306/fastapi_db"
+from config import db_url
 engine = create_engine(db_url, pool_pre_ping=True, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
